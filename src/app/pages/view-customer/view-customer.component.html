@@ -1,0 +1,40 @@
+<div class="customer-details" *ngIf="customer && !loading">
+    <div class="details-container">
+        <h2>{{customer.name}}</h2>
+    
+        <div class="info-section">
+            <h3>Personal Information</h3>
+            <p><strong>Username:</strong> {{customer.username}}</p>
+            <p><strong>Email:</strong> {{customer.email}}</p>
+            <p><strong>Phone:</strong> {{customer.phone}}</p>
+            <p><strong>Website:</strong> {{customer.website}}</p>
+        </div>
+
+        <div class="info-section">
+            <h3>Home Address</h3>
+            <p><strong>Street:</strong> {{customer.address.street}}</p>
+            <p><strong>Suite:</strong> {{customer.address.suite}}</p>
+            <p><strong>City:</strong> {{customer.address.city}}</p>
+            <p><strong>Zipcode:</strong> {{customer.address.zipcode}}</p>
+            <p><strong>Location:</strong> 
+                Lat: {{customer.address.geo.lat}}, 
+                Lng: {{customer.address.geo.lng}}
+            </p>
+        </div>
+    
+        <div class="info-section">
+            <h3>Company</h3>
+            <p><strong>Name:</strong> {{customer.company.name}}</p>
+            <p><strong>Catch Phrase:</strong> {{customer.company.catchPhrase}}</p>
+            <p><strong>Business:</strong> {{customer.company.bs}}</p>
+        </div>
+    
+        <div class="actions">
+            <button mat-button (click)="onEdit()">Edit</button>
+            <button mat-button color="warn" (click)="onDelete()">Delete</button>
+        </div>
+    </div>
+
+    <mat-spinner *ngIf="loading" diameter="50" class="loading-spinner"></mat-spinner>
+</div>
+  

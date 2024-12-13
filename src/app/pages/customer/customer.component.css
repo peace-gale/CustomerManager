@@ -1,0 +1,224 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 125px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin: 24px 0;
+    position: relative;
+    min-height: 200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.mat-mdc-header-row {
+    background-color: #0A2463;
+}
+
+.mat-mdc-header-cell {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.mat-mdc-row {
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.mat-mdc-row:nth-child(even) {
+    background-color: #EAF2F8;
+}
+
+.mat-mdc-row:hover {
+    background-color: #C5E0F5 !important;
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mat-column-actions {
+    width: 120px;
+    text-align: right;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toolbar {
+    background-color: #0A2463;
+    color: white;
+    padding: 0 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.add-customer-button {
+    background-color: #4A90E2 !important;
+    color: white !important;
+    font-weight: 500;
+    padding: 0 24px;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.add-customer-button:hover {
+    background-color: #78B9EE !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-top: 24px;
+    position: relative;
+    min-height: 200px;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.mat-mdc-header-row {
+    background-color: #0A2463;
+    border-radius: 4px 4px 0 0;
+}
+
+.mat-mdc-header-cell {
+    color: white !important;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 16px !important;
+}
+
+.mat-mdc-row {
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.mat-mdc-row:nth-child(even) {
+    background-color: #EAF2F8;
+}
+
+.mat-mdc-row:hover {
+    background-color: #C5E0F5 !important;
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mat-mdc-cell {
+    color: #333333;
+    padding: 16px !important;
+    font-size: 14px;
+}
+
+.mat-column-actions {
+    width: 120px;
+    text-align: right;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Action buttons styling */
+.mat-icon-button {
+    color: #4A90E2;
+    transition: all 0.2s ease;
+}
+
+.mat-icon-button:hover {
+    color: #0A2463;
+    transform: scale(1.1);
+}
+
+.mat-icon-button[color="warn"]:hover {
+    color: #FF5A5F;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.edit-button {
+    color: #4A90E2 !important;
+    transition: all 0.2s ease;
+}
+
+.edit-button:hover {
+    color: #0A2463 !important;
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+.delete-button {
+    color: #dc3545 !important;
+    transition: all 0.2s ease;
+}
+
+.delete-button:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.add-customer-button {
+    background-color: #4A90E2 !important;
+    color: white !important;
+    border-radius: 24px;
+    padding: 0 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.add-customer-button:hover {
+    background-color: #0A2463 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

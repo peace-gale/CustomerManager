@@ -1,0 +1,81 @@
+.search-container {
+  padding: 24px;
+  background: #0A2463;
+  border-radius: 8px 8px 0 0;
+}
+
+.search-field {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+:host {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.mat-mdc-form-field-appearance-outline {
+  background-color: white;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-flex {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 0 16px !important;
+  height: 48px;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-outline {
+  color: #4A90E2;
+}
+
+.mat-icon {
+  color: #0A2463;
+}
+
+::ng-deep .search-field .mat-mdc-text-field-wrapper {
+  padding: 0;
+  background-color: transparent !important;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-flex:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+::ng-deep .search-field .mdc-notched-outline {
+  display: none;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-infix {
+  padding: 0 !important;
+}
+
+::ng-deep .search-field .mat-mdc-input-element {
+  color: white !important;
+  caret-color: white !important;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-label {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+::ng-deep .search-field .mat-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+::ng-deep .search-field .mat-mdc-icon-button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+::ng-deep .search-field .mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-color: transparent;
+}
+
+::ng-deep .search-field .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}

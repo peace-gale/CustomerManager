@@ -1,0 +1,97 @@
+<div class="customerInputForm">
+    <h2>Add Customer</h2>
+    <form [formGroup]="customerFormGroup" >
+        <div class="form-section">
+            <h3>Personal Information</h3>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input type="text" formControlName="name" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input type="text" formControlName="username" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input type="email" formControlName="email" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Phone</mat-label>
+                <input type="text" formControlName="phone" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Website</mat-label>
+                <input type="url" formControlName="website" matInput>
+            </mat-form-field>
+        </div>
+
+        <!-- Start of nested address form group -->
+        <div formGroupName="address" class="form-section">
+            <h3>Home Address</h3>
+            <mat-form-field class="full-width">
+                <mat-label>Suite</mat-label>
+                <input type="number" formControlName="suite" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Street</mat-label>
+                <input type="text" formControlName="street" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>City</mat-label>
+                <input type="text" formControlName="city" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Zipcode</mat-label>
+                <input type="text" formControlName="zipcode" matInput>
+            </mat-form-field>
+
+            <!-- Nested geo form group -->
+            <div formGroupName="geo" class="geo">
+                <mat-form-field class="full-width">
+                    <mat-label>Latitude</mat-label>
+                    <input type="text" formControlName="lat" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Longitude</mat-label>
+                    <input type="text" formControlName="lng" matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- End of nested address form group -->
+
+        <div class="form-section" formGroupName="company">
+            <h3>Company Details</h3>
+            <mat-form-field>
+              <mat-label>Company Name</mat-label>
+              <input type="text" formControlName="name" matInput>
+            </mat-form-field>
+      
+            <mat-form-field>
+              <mat-label>Catch Phrase</mat-label>
+              <input type="text" formControlName="catchPhrase" matInput>
+            </mat-form-field>
+      
+            <mat-form-field>
+              <mat-label>Business Service</mat-label>
+              <input type="text" formControlName="bs" matInput>
+            </mat-form-field>
+          </div>
+
+          <div class="form-actions">
+        <button mat-raised-button color="primary" 
+                (click)="submitForm()" 
+                [disabled]="isSubmitting">
+          {{ isSubmitting ? 'Creating...' : 'Create Customer' }}
+        </button>
+        <button mat-button [routerLink]="['/customer']">Cancel</button>
+      </div>
+    </form>
+</div>

@@ -1,0 +1,73 @@
+<mat-toolbar class="toolbar">
+    <button mat-icon-button aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title">Customer Manager</span>
+    <span class="spacer"></span>
+    <div class="add-button-container">
+        <a mat-fab extended color="accent" href="../createcustomer/" class="add-customer-button">
+          <mat-icon>add</mat-icon>
+          Add Customer
+        </a>
+    </div>
+</mat-toolbar>
+
+<div class="content-container">
+    <app-search-customer (searchResults)="onSearchResults($event)"></app-search-customer>
+
+    <div class="table-container">
+        <mat-spinner *ngIf="loading" diameter="50" class="loading-spinner"></mat-spinner>
+        
+        <table mat-table [dataSource]="dataSource" class="customer-table" *ngIf="!loading">
+            <!-- Existing columns -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let element">{{element.id}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="phone">
+                <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+                <td mat-cell *matCellDef="let element">{{element.phone}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef>Email</th>
+                <td mat-cell *matCellDef="let element">{{element.email}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="address">
+                <th mat-header-cell *matHeaderCellDef>Address</th>
+                <td mat-cell *matCellDef="let element">{{element.address.suite}}</td>
+            </ng-container>
+
+            <!-- Actions Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="action-buttons">
+                        <button mat-icon-button class="edit-button" [routerLink]="['/editcustomer', element.id]">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button class="delete-button" (click)="deleteCustomer(element.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" 
+                (click)="onViewCustomer(row.id)" 
+                style="cursor: pointer;">
+            </tr>
+        </table>
+    </div>
+</div>
+  
+  
+  
